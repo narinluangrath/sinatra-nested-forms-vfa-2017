@@ -1,1 +1,46 @@
-<h1>Make your form here</h1>
+<h1>How Thic is Your Booty?</h1>
+
+<form method="post" action="/pirates">
+
+  Pirate Name: <input type="text" name="pirate[name]"></input>
+  Pirate Weight: <input type="text" name="pirate[weight]"></input>
+  Pirate Height: <input type="text" name="pirate[height]"></input>
+  <br>
+  Ship 1 Name: <input type="text" id="ship_name_1" name="pirate[ships][][name]"></input>
+  Ship 1 Type: <input type="text" id="ship_type_1" name="pirate[ships][][type]"></input>
+  Ship 1 Booty: <input type="text" id="ship_booty_1" name="pirate[ships][][booty]"></input> <!-- (Only Thic Ships) --->
+  <br>
+  Ship 1 Name: <input type="text" id="ship_name_2" name="pirate[ships][][name]"></input>
+  Ship 1 Type: <input type="text" id="ship_type_2" name="pirate[ships][][type]"></input>
+  Ship 1 Booty: <input type="text" id="ship_booty_2" name="pirate[ships][][booty]"></input> <!-- (Only Thic Ships) --->
+
+  <input type="submit" value="Submit">
+
+</form>
+
+<!-- Make a nested form (this should probably have html <label>s so it makes sense to a user).
+This form will be creating three objects (one instance of the Pirate class, and two instances of the Ship class). Remember, you'll need to build a corresponding controller action to load this page. Your form should POST to the route '/pirates'. -->
+<!--
+   it "renders a new form element on the page" do
+     expect(last_response.body).to include("<form")
+     expect(last_response.body).to include("</form>")
+   end
+
+   it "renders the pirate input fields for name, weight, and height attributes on the page" do
+     expect(last_response.body).to include("pirate[name]")
+     expect(last_response.body).to include("pirate[weight]")
+     expect(last_response.body).to include("pirate[height]")
+   end
+
+   it "renders the first ship's input fields for the name, type, and booty attributes on the page" do
+     expect(last_response.body).to include("pirate[ships][][name]")
+     expect(last_response.body).to include("pirate[ships][][type]")
+     expect(last_response.body).to include("pirate[ships][][booty]")
+   end
+
+   it "renders the second ship's input field for the name, type, and booty attributes on the page" do
+     expect(last_response.body).to include("pirate[ships][][name]")
+     expect(last_response.body).to include("pirate[ships][][type]")
+     expect(last_response.body).to include("pirate[ships][][booty]")
+   end
+ end -->
